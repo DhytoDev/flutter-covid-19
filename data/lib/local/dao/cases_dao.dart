@@ -11,6 +11,6 @@ class CasesDao extends DatabaseAccessor<CovidDatabase> with _$CasesDaoMixin {
 
   Future<List<CaseEntity>> getAllCases() => select(cases).get();
 
-  Future<int> insertCase(Insertable<CaseEntity> caseEntity) => into(cases).insert(caseEntity);
+  Future<int> insertCase(CasesCompanion entry) => into(cases).insert(entry, orReplace: true);
 
 }

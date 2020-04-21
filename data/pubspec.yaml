@@ -15,6 +15,7 @@ dependencies:
   moor_ffi: ^0.4.0
   path_provider:
   path:
+  data_connection_checker: ^0.3.4
   core:
     path: ../core
   domain:

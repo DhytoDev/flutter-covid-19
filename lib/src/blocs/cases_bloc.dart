@@ -7,9 +7,9 @@ import 'package:rxdart/rxdart.dart';
 class CasesBloc {
   final GetCovid19GlobalCasesUseCase useCase;
 
-  final _casesSubject = BehaviorSubject<Resource<Cases>>();
+  final _casesSubject = BehaviorSubject<Resource<Case>>();
 
-  Stream<Resource<Cases>> get globalCases => _casesSubject.stream;
+  Stream<Resource<Case>> get globalCases => _casesSubject.stream;
 
   CasesBloc(this.useCase) {
     getGlobalCases();

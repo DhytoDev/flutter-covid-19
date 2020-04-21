@@ -35,8 +35,8 @@ class CasesResponse {
     return data;
   }
 
-  Cases toCases() {
-    return Cases(confirmed.value, deaths.value, recovered.value, lastUpdate);
+  Case toCase() {
+    return Case(confirmed.value, deaths.value, recovered.value, lastUpdate);
   }
 }
 

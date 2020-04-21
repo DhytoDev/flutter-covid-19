@@ -44,7 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: StreamBuilder(
           stream: casesBloc.globalCases,
-          builder: (context, AsyncSnapshot<Resource<Cases>> snapshot) {
+          builder: (context, AsyncSnapshot<Resource<Case>> snapshot) {
+            if(!snapshot.hasData) return Container();
+
             final result = snapshot.data;
 
             if (result.resourceState == ResourceState.SUCCESS) {
